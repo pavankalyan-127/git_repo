@@ -1,0 +1,45 @@
+{
+	"name": "data_customers_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_datalake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_containers": {
+				"type": "string"
+			},
+			"p_folders": {
+				"type": "string"
+			},
+			"p_files": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_files",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().p_folders",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().p_containers",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "adfadvancepavan",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1e0c9ccd-6bda-4928-a587-ec0f04076654",
+		"tenantId": "eb2eb96b-a651-4dbe-b904-637d8413a15a"
+	}
+}
