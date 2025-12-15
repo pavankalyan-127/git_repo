@@ -23,8 +23,7 @@
 			],
 			"transformations": [
 				{
-					"name": "upper",
-					"description": "Creating/updating the columns 'location_id, city, state, country, latitude, longitude, last_updated_timestamp, column2"
+					"name": "upper"
 				},
 				{
 					"name": "select"
@@ -62,8 +61,8 @@
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'delta',",
-				"     fileSystem: 'deltasource',",
-				"     folderPath: 'deltaoutput',",
+				"     fileSystem: 'sink',",
+				"     folderPath: 'deltasink',",
 				"     mergeSchema: false,",
 				"     autoCompact: false,",
 				"     optimizedWrite: false,",
